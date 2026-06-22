@@ -1,4 +1,5 @@
-# 🌐 Matriz Termodinámica de la Producción (MTP)
+---
+*Las grandes revoluciones no se votan en despachos, se programan en la realidad física. Bienvenidos al futuro pos-monetario.* Que es esto?# 🌐 Matriz Termodinámica de la Producción (MTP)
 > **El plano bio-digital e industrial para una sociedad basada en las leyes de la física y la soberanía humana.**
 
 ---
