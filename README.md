@@ -388,3 +388,50 @@ En el viejo orden, la identidad del ser humano estaba ligada indisolublemente a 
 El ciudadano es soberano absoluto de su tiempo. Esto genera una diversificación masiva de la experiencia humana: un individuo puede actuar como ingeniero de software por la mañana, agricultor biológico en el anillo regenerativo por la tarde y músico por la noche. La identidad se vuelve fluida, polímata y centrada en la expansión de la consciencia humana.
 
 ---
+# 📢 Manual de Divulgación, Narrativa y Contenido Pop (MTP)
+> **Módulo Oficial para la Transmisión de la Teoría Pos-Monetaria al Ciudadano Común**
+
+---
+
+## 📄 1. El Enfoque Narrativo: Desmantelar la Distopía
+
+La mayoría de los discursos tecnológicos actuales oscilan entre la distopía ciberpunk (corporaciones controlándolo todo) o el primitivismo tecnófobo (volver al pasado). La MTP rompe este marco mediante el **Solarpunk Transhumanista Radical**: la tecnología avanzada no es el enemigo, sino el sustrato físico que permite la emancipación de la biología humana.
+
+Para comunicar esto con impacto, la narrativa debe basarse en el contraste absoluto: **Ficción Fiduciaria vs. Realidad Física**.
+
+---
+
+## 🎬 2. Plantilla de Guion para Vídeo Corto (TikTok / Reels)
+*Este formato está diseñado para retener la atención en los primeros 3 segundos y hackear el algoritmo mediante curiosidad técnica.*
+
+* **[0:00 - 0:03] El Gancho Visual:** (Muestras una moneda o un billete y lo quemas, o pones una imagen de una IA destrozando una oficina). 
+    * *Voz en off:* "El dinero que tienes en el bolsillo es una ficción matemática que te obliga a cambiar tiempo de vida por pura supervivencia. Y la IA no viene a quitarte el trabajo; viene a liberarte de él".
+* **[0:03 - 0:15] El Núcleo de la Teoría:** (Transición rápida a gráficos de redes de energía o plantas automatizadas).
+    * *Voz en off:* "Esto es la MTP: la Matriz Termodinámica de la Producción. Un sistema donde los gobiernos y el dinero se eliminan. Aquí la única moneda real es el **Julio ($J$)**. Si la red tiene la energía física y la materia prima, los robots producen lo que necesitas de forma automática y gratuita. Punto".
+* **[0:15 - 0:30] El Giro de Soberanía:** (Imágenes estéticas solarpunk, personas creando arte o interfaces cerebrales limpias).
+    * *Voz en off:* "Sin jefes, sin patentes sobre la vida gracias a la Doctrina DM-CA, y con escudos de hardware para que nadie pueda hackear tu mente. No es política, es ingeniería física. Bienvenidos al futuro pos-monetario".
+
+---
+
+## 📸 3. Estructura de Carrusel para Imágenes (Instagram)
+*Estructura exacta de 5 diapositivas para explicar un concepto complejo de forma visual y secuencial.*
+
+### Tema del Carrusel: "¿Y si el dinero dejara de existir mañana?"
+
+1.  **Diapositiva 1 (Portada):** Texto gigante y minimalista con fondo oscuro y neón: *¿Por qué medimos el mundo en monedas falsas cuando podemos medirlo en leyes de la física?*
+2.  **Diapositiva 2 (El Concepto):** Gráfico simple que compare: *Capitalismo (Dinero abstracto + Inflación + Trabajo forzado)* VS. *MTP (Energía real en Julios + Automatización + Tiempo libre neto).*
+3.  **Diapositiva 3 (La Infraestructura):** Explicación de los BCNH: *Bienes Comunes No Humanos. Fábricas sin dueños gobernadas por código abierto que se encargan de la comida, el techo y la salud de forma ciega.*
+4.  **Diapositiva 4 (El Escudo Humano):** Conceptos de protección: *Doctrina DM-CA e Inmunidad Cripto-Sujeta. Se prohíbe el software propietario en tu biología. Tu mente es tuya y está blindada por hardware.*
+5.  **Diapositiva 5 (Llamado a la Acción):** Imagen del repositorio de GitHub con el texto: *Las revoluciones ya no se votan, se programan. Entra al repositorio oficial y lee el Manifiesto del Cripto-Sujeto.*
+
+---
+
+## 🛠️ 4. Glosario Narrativo Pop (Traducción de Conceptos)
+
+Para hablar con el público masivo, se deben sustituir los términos densos por analogías directas y comprensibles:
+
+* **En lugar de "Bienes Comunes No Humanos", di:** *"Infraestructura Fantasma o Automatizada"*.
+* **En lugar de "Excedente Termodinámico / Cultural", di:** *"Tiempo Neto de Vida Devuelto"*.
+* **En lugar de "Contabilidad Negentrópica", di:** *"Impuesto de Regeneración Obligatoria por Código"*.
+
+---
