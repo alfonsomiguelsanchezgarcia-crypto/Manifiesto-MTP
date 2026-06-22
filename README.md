@@ -1,38 +1,4 @@
-# 🌌 Expansiones de la Matriz Termodinámica (MTP - Fase Avanzada)
-> **Módulos de Gobernanza, Bio-Protección y Transición Sistemática**
 
-Este repositorio contiene la arquitectura avanzada de la MTP, diseñada para resolver la gobernanza matemática, la protección del ecosistema y el hackeo logístico del viejo sistema.
-
----
-
-## 🧠 1. Homostasis Cognitiva Distribuida (HCD)
-*El fin de la política tradicional y la democracia de opinión.*
-
-La HCD sustituye los votos abstractos por **atractores matemáticos** basados en la realidad biológica y física. 
-*   **Índice de Estrés Entrópico Neural ($\Delta S_n$):** El sistema mide el impacto real y el estrés que las decisiones logísticas causan en la población mediante la red bio-digital. 
-*   Si una decisión (ej. cambiar una ruta de transporte) eleva el estrés entrópico de la comunidad, el algoritmo de la Matriz la descarta automáticamente. La sociedad se autogestiona buscando el equilibrio termodinámico, no el debate ideológico.
-
----
-
-## 🌍 2. Teorema de la Negentropía Biológica Común (NBC)
-*El blindaje planetario absoluto.*
-
-Establece a la Tierra como el **"Nodo Cero"** de la red. 
-*   Ninguna Célula Local ni industria automatizada puede ejecutar un plano si el coste termodinámico local reduce la biodiversidad o daña el equilibrio del suelo.
-*   La prioridad absoluta del sistema es generar orden (negentropía) en la biosfera. Los recursos naturales no son materias primas para explotar, sino sistemas vivos que la Matriz está obligada a regenerar de forma prioritaria para mantener su propia estabilidad energética.
-
----
-
-## 🔄 3. Protocolo de Transición Inversa (PTI)
-*El caballo de Troya logístico.*
-
-El mapa de ruta para migrar del capitalismo actual a la MTP sin provocar desabastecimiento ni colapsos humanos.
-*   **Fase de Simbiosis:** La MTP utiliza las infraestructuras de la red actual (fábricas, servidores, satélites) inyectándoles código abierto de forma progresiva.
-*   **Desconexión de Valor:** A medida que una Célula Local automatiza su alimentación y energía con Julios, se "desconecta" del sistema fiduciario. El dinero pierde su poder sobre esa comunidad porque sus necesidades vitales ya están cubiertas por la Matriz de forma física.
-
----
-
----
 *Las grandes revoluciones no se votan en despachos, se programan en la realidad física. Bienvenidos al futuro pos-monetario.* Que es esto?# 🌐 Matriz Termodinámica de la Producción (MTP)
 > **El plano bio-digital e industrial para una sociedad basada en las leyes de la física y la soberanía humana.**
 
@@ -295,4 +261,34 @@ Cada enjambre de extracción, satélite o nodo orbital opera como una **sub-bloc
 ### Declaración de Conocimiento Libre
 Este documento es un bien común de la humanidad. Se otorga el derecho universal de copiar, distribuir, exhibir, debatir y modificar esta teoría de forma libre, siempre y cuando se reconozca la autoría de los creadores firmantes y cualquier obra derivada sea compartida bajo esta misma filosofía de libertad y código abierto (Copyleft).
 
+# 🌌 Expansiones de la Matriz Termodinámica (MTP - Fase Avanzada)
+> **Módulos de Gobernanza, Bio-Protección y Transición Sistemática**
 
+Este repositorio contiene la arquitectura avanzada de la MTP, diseñada para resolver la gobernanza matemática, la protección del ecosistema y el hackeo logístico del viejo sistema.
+
+---
+
+## 🧠 1. Homostasis Cognitiva Distribuida (HCD)
+*El fin de la política tradicional y la democracia de opinión.*
+
+La HCD sustituye los votos abstractos por **atractores matemáticos** basados en la realidad biológica y física. 
+*   **Índice de Estrés Entrópico Neural ($\Delta S_n$):** El sistema mide el impacto real y el estrés que las decisiones logísticas causan en la población mediante la red bio-digital. 
+*   Si una decisión (ej. cambiar una ruta de transporte) eleva el estrés entrópico de la comunidad, el algoritmo de la Matriz la descarta automáticamente. La sociedad se autogestiona buscando el equilibrio termodinámico, no el debate ideológico.
+
+---
+
+## 🌍 2. Teorema de la Negentropía Biológica Común (NBC)
+*El blindaje planetario absoluto.*
+
+Establece a la Tierra como el **"Nodo Cero"** de la red. 
+*   Ninguna Célula Local ni industria automatizada puede ejecutar un plano si el coste termodinámico local reduce la biodiversidad o daña el equilibrio del suelo.
+*   La prioridad absoluta del sistema es generar orden (negentropía) en la biosfera. Los recursos naturales no son materias primas para explotar, sino sistemas vivos que la Matriz está obligada a regenerar de forma prioritaria para mantener su propia estabilidad energética.
+
+---
+
+## 🔄 3. Protocolo de Transición Inversa (PTI)
+*El caballo de Troya logístico.*
+
+El mapa de ruta para migrar del capitalismo actual a la MTP sin provocar desabastecimiento ni colapsos humanos.
+*   **Fase de Simbiosis:** La MTP utiliza las infraestructuras de la red actual (fábricas, servidores, satélites) inyectándoles código abierto de forma progresiva.
+*   **Desconexión de Valor:** A medida que una Célula Local automatiza su alimentación y energía con Julios, se "desconecta" del sistema fiduciario. El dinero pierde su poder sobre esa comunidad porque sus necesidades vitales ya están cubiertas por la Matriz de forma física.
