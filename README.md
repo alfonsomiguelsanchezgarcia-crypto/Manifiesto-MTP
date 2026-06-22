@@ -461,4 +461,35 @@ El software lee directamente los sensores físicos de los paneles solares y alma
 * Si los sensores dicen que hay **100 Julios**, el sistema solo puede gastar **100 Julios**. 
 * Nadie (ni un gobierno, ni el creador del código) puede inventarse números en una pantalla. Si la energía no existe físicamente en el mundo real, el sistema no la puede fabricar.
 
+---# 🌐 Red Global: Conectividad Inter-Células
+> **Módulo Oficial: Cómo se comunican y comparten recursos los nodos de la MTP.**
+
+Una Célula Local no es un elemento aislado del mundo. Todas las Células están interconectadas en una red global de código abierto. Sin embargo, no intercambian mercancías para ganar dinero, sino para equilibrar la física del planeta.
+
 ---
+
+## 🛰️ 1. Cero Comercio, Máxima Eficiencia
+En la MTP no existen las "rutas comerciales" tradicionales diseñadas para especular con el precio de las cosas. Las Células se conectan bajo dos reglas físicas estrictas:
+
+* **Compartir el Superávit:** Si una Célula genera más Julios de los que sus habitantes necesitan, esa energía se comparte automáticamente a través de la red con el nodo más cercano que registre mayor demanda o desgaste entrópico.
+* **El Viaje de los Planos, no de los Objetos:** En lugar de fabricar una herramienta en una punta del mundo y transportarla en barco contaminando el planeta, la red viaja de forma digital. Se descarga el plano criptográfico de código abierto y se fabrica directamente en la Micro-Fundición local.
+
+---
+
+## 🌊 2. El Protocolo de Materias Primas Críticas
+Hay elementos químicos o materiales que no están en todas partes de la Tierra (como ciertos componentes para la medicina avanzada). Cuando un nodo necesita un material que no tiene:
+
+1. **Petición Automatizada:** El software de la Célula lanza una alerta a la Red Global.
+2. **Cálculo del Coste de Disipación:** La Matriz busca el nodo con exceso de ese material que esté a la distancia física más corta, minimizando la energía gastada en el transporte.
+3. **Reemplazo Obligatorio:** El transporte solo se ejecuta si no existe una alternativa sintética o de reciclaje molecular que se pueda fabricar localmente en el taller comunitario.
+
+---
+
+## 🛡️ 3. La Red Descentralizada e Inmune
+La infraestructura de conectividad (los satélites de datos, las redes ópticas y los cables submarinos) funciona como un *Bien Común No Humano (BCNH)*.
+
+* Ningún país, corporación o nodo puede "apagar" o censurar internet o la red de datos de la Matriz.
+* La comunicación utiliza criptografía descentralizada. Si un nodo cae o es saboteado, el resto de la red global recalcula las rutas de datos y energía al instante, manteniendo el sistema vivo y estable de forma autónoma.
+
+---
+
