@@ -292,3 +292,51 @@ Establece a la Tierra como el **"Nodo Cero"** de la red.
 El mapa de ruta para migrar del capitalismo actual a la MTP sin provocar desabastecimiento ni colapsos humanos.
 *   **Fase de Simbiosis:** La MTP utiliza las infraestructuras de la red actual (fábricas, servidores, satélites) inyectándoles código abierto de forma progresiva.
 *   **Desconexión de Valor:** A medida que una Célula Local automatiza su alimentación y energía con Julios, se "desconecta" del sistema fiduciario. El dinero pierde su poder sobre esa comunidad porque sus necesidades vitales ya están cubiertas por la Matriz de forma física.
+# 🏛️ Arquitectura Termodinámica: El Diseño Funcional de la Célula Local (Escalón 1)
+> **Módulo Oficial de la MTP para el Urbanismo Negentrópica y la Soberanía Física**
+
+---
+
+## 📄 1. Filosofía del Urbanismo Físico
+
+En el viejo sistema socioeconómico, los edificios eran sumideros energéticos pasivos diseñados bajo la lógica del mercado inmobiliario y la especulación financiera. Bajo la **Matriz Termodinámica de la Producción (MTP)**, la arquitectura es una extensión directa del *Teorema de la Negentropía Biológica Común (NBC)*. Las estructuras habitacionales están obligadas matemáticamente a inyectar orden, captar energía y purificar el ecosistema local en el que se asientan.
+
+La **Célula Local** no se diseña como una ciudad dormitorio, sino como un nodo biológico y técnico integrado, optimizado para eliminar el transporte innecesario, reducir la disipación energética y maximizar el *Excedente Cultural* de sus habitantes.
+
+---
+
+## 🤖 2. Anatomía de la Célula Local (Infraestructuras Troncales)
+
+Cada Célula se compone de módulos interconectados que gestionan de forma automatizada las necesidades críticas del **Escalafón de la Necesidad**. Estas infraestructuras operan como *Bienes Comunes No Humanos (BCNH)*, libres de control político o empresarial:
+
+### 🛠️ A. La Micro-Fundición (Taller Comunitario)
+*   **Función Logística:** Producción, reparación y reciclaje molecular de herramientas, ropa, mobiliario y componentes tecnológicos esenciales.
+*   **Tecnología:** Sistemas de fabricación aditiva avanzada (impresión 3D industrial), brazos robóticos de ensamblaje ciego y hornos de inducción magnética alimentados por el superávit de Julios locales.
+
+### ⚡ B. El Captador y Almacén de Julios
+*   **Función Logística:** Captación termo-solar, eólica y piezoeléctrica. Gestión del balance térmico residencial y el almacenamiento de energía a largo plazo para asegurar la autonomía de la red.
+*   **Tecnología:** Células fotovoltaicas de perovskita de alta eficiencia, volantes de inercia magnética en el subsuelo y sistemas de almacenamiento térmico en sales fundidas para calefacción pasiva.
+
+### 🌱 C. El Anillo Bio-Regenerativo
+*   **Función Logística:** Soberanía alimentaria (garantizando de forma automática el 80% de la dieta requerida por el nodo) y purificación de agua/aire mediante procesos biológicos acoplados.
+*   **Tecnología:** Torres de hidroponía y aeroponía automatizadas por la Matriz, tanques de acuaponía vertical y humedales artificiales controlados por enjambres de biorremediación molecular.
+
+---
+
+## 🧱 3. Materiales y el Factor de Disipación Geográfica
+
+Para evitar costes logísticos colosales medidos por la ecuación del **Coste de Disipación ($C_D$)**, la MTP prohíbe el transporte de materiales de construcción pesados de baja pureza a largas distancias. La arquitectura es radicalmente endémica:
+
+*   **Geopolímeros y Micelio:** Las estructuras portantes se fabrican utilizando polímeros basados en cenizas o rocas locales, combinados con bio-estructuras de micelio de hongos cultivados en los propios talleres comunitarios, sirviendo como un aislante térmico y acústico perfecto.
+*   **Impresión Estructural Contigua:** Los edificios residenciales y comunes no se construyen pieza a pieza por humanos; grúas automatizadas de código abierto imprimen las estructuras utilizando mezclas de tierra, paja y aglutinantes orgánicos locales en trayectorias optimizadas térmicamente para aprovechar la luz solar de la zona.
+
+---
+
+## 🛡️ 4. Privacidad Espacial e Inmunidad Cripto-Sujeta (ICS)
+
+El diseño de los espacios habitacionales respeta escrupulosamente la soberanía biológica e intelectual de los ciudadanos:
+
+1.  **Aislamiento Electromagnético:** Cada unidad habitacional cuenta con un aislamiento de jaula de Faraday integrado en el propio geopolímero estructural, bloqueando cualquier frecuencia electromagnética o intento de escaneo no autorizado desde el exterior.
+2.  **Canales Ópticos Locales:** Los flujos de datos dentro del hogar se realizan exclusivamente mediante canales de luz abierta (Li-Fi) controlados en local por el firmware del usuario, garantizando que el espacio físico sea un santuario inviolable para la mente humana (Doctrina DM-CA).
+
+---
