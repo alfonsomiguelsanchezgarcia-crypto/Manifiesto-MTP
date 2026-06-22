@@ -1,3 +1,39 @@
+# 🌐 Matriz Termodinámica de la Producción (MTP)
+> **El plano bio-digital e industrial para una sociedad basada en las leyes de la física y la soberanía humana.**
+
+---
+
+## 🛠️ Acerca del Proyecto
+
+La **Teoría MTP** es un modelo de ingeniería social, logística y económica diseñado para sustituir el sistema monetario abstracto actual por un ecosistema gobernado por las leyes de la termodinámica. En la MTP, el dinero se elimina y el **Julio ($J$)** se convierte en la única unidad real de medida, coste y producción.
+
+Este repositorio es el cuartel general de código abierto donde se desarrollan los Whitepapers, manifiestos, protocolos y herramientas de divulgación de la red.
+
+---
+
+## 📖 Pilares Fundamentales de la MTP
+
+*   **⚡ El Julio ($J$):** La única moneda real. Si la red dispone de la energía física y la materia prima, los bienes se producen de forma automática y gratuita para el ciudadano.
+*   **🤖 Bienes Comunes No Humanos (BCNH):** Infraestructuras industriales, de salud y logística 100% automatizadas y gobernadas por código abierto. Sin jefes, sin empresas, sin intermediarios.
+*   **🧬 Doctrina DM-CA (Derecho de Mente y Código Abierto):** Protección constitucional del cuerpo y la mente. Queda estrictamente prohibido el software propietario o las patentes en la biología e interfaces neurales humanas.
+*   **🛡️ Inmunidad Cripto-Sujeta (ICS):** Escudos de hardware integrados para garantizar la privacidad mental absoluta y la soberanía digital frente a cualquier control externo.
+*   **🌱 Contabilidad Negentrópica:** Obligación matemática del sistema de regenerar el doble de los recursos que consume, convirtiendo la producción en un motor ecológico.
+
+---
+
+## 📂 Estructura del Repositorio
+
+*   `/manifiesto`: Textos introductorios y filosofía pop para el ciudadano.
+*   `/whitepaper`: Documentación técnica y ecuaciones físicas de la matriz de asignación energética.
+*   `/glosario`: Términos oficiales y axiomas de la Fase 1.
+*   `/divulgacion`: Guiones de vídeo, prompts para carruseles de imágenes y material educativo.
+
+---
+
+## 🫆 Gobernanza y Autoría (Consentimiento Activo)
+
+Este proyecto es de código abierto (Open Source), pero se rige bajo la soberanía estricta del consentimiento humano y la firma criptográfica. 
+
 # Manifiesto-MTP
  Teoría de la Matriz Termodinámica de la Producción
 Teoría de la Matriz Termodinámica de la Producción (MTP)
