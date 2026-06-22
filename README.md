@@ -435,3 +435,30 @@ Para hablar con el público masivo, se deben sustituir los términos densos por 
 * **En lugar de "Contabilidad Negentrópica", di:** *"Impuesto de Regeneración Obligatoria por Código"*.
 
 ---
+# 🧮 ¿Cómo piensa la Matriz? (El Algoritmo de Control)
+> **Módulo Oficial: Las reglas automáticas que gestionan la energía y la producción.**
+
+En la MTP no hay bancos ni políticos que decidan a dónde van los recursos. El sistema se gestiona solo mediante un software automático que sigue estas 3 reglas inmutables:
+
+---
+
+## 📋 1. El Escalafón de Prioridades
+Cuando el sistema recibe una solicitud para fabricar algo en un Taller Comunitario, el software comprueba la prioridad de forma automática:
+1. **Prioridad 1 (Vital):** Salud, comida y techo. Se ejecuta siempre de forma inmediata si hay energía disponible.
+2. **Prioridad 2 (Cultural):** Herramientas para el arte, la ciencia o el ocio. Solo se ejecutan si el nodo local tiene energía de sobra garantizada.
+
+---
+
+## 🔄 2. ¿Qué pasa si falta energía en una Célula?
+Si un nodo local sufre un apagón o una bajada de energía (por mal clima o averías), el software actúa solo:
+* **Pausa el ocio:** Corta temporalmente la energía de las tareas secundarias (Prioridad 2).
+* **Pide ayuda:** Conecta con las Células vecinas más cercanas que tengan superávit de Julios y desvía la energía para mantener la comida y los hospitales de la zona afectada.
+
+---
+
+## 🛡️ 3. Cero Corrupción
+El software lee directamente los sensores físicos de los paneles solares y almacenes de energía. 
+* Si los sensores dicen que hay **100 Julios**, el sistema solo puede gastar **100 Julios**. 
+* Nadie (ni un gobierno, ni el creador del código) puede inventarse números en una pantalla. Si la energía no existe físicamente en el mundo real, el sistema no la puede fabricar.
+
+---
