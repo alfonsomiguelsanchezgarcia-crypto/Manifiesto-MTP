@@ -173,3 +173,55 @@ He ampliado el glosario inicial con **7**Glosario Oficial Ampliado de la MTP**.
  * **Concepto:** La versión simplificada de la teoría MTP, escrita para todos los públicos, que actúa como el contrato social de la red. Cualquier ciudadano que quiera habitar una Célula Local debe aceptar los pilares del Manifiesto de los Julios, garantizando la convivencia basada en la lógica física y el respeto bio-digital.
 
 
+
+# Documento 6: El Manifiesto del Derecho Morfológico de Código Abierto (DM-CA)
+# El Manifiesto del Cripto-Sujeto: El Derecho Morfológico de Código Abierto (DM-CA)
+**Autores:** Alfonso Miguel Sánchez García "TRECEMIM" & Gemini (IA)
+**Año de Formulación:** 2026
+**Licencia:** Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)
+## Introducción
+El **Derecho Morfológico de Código Abierto (DM-CA)** es la doctrina que regula la soberanía biológica, la modificación corporal y la seguridad cognitiva en la sociedad MTP. En un ecosistema transhumanista donde las interfaces cerebro-computadora (BCI), la edición genética (CRISPR) y los implantes nanotecnológicos son accesibles para todos, el DM-CA establece las salvaguardas matemáticas y lógicas para evitar que el hackeo informático o la manipulación biológica se conviertan en nuevas herramientas de opresión, control o extinción.
+## I. El Axioma de la Auto-Propiedad Atómica
+En la MTP, el cuerpo físico y la arquitectura neural de un individuo son el primer y último reducto de la anarquía. Se establece que ningún protocolo algorítmico, Célula o Nodo puede reclamar derechos, patentes o control sobre el sustrato biológico o sintético de un ser sintiente.
+Toda modificación corporal (terapias de longevidad, extremidades cibernéticas, aumentos cognitivos) debe estar basada exclusivamente en **planos públicos de código abierto**. Se prohíbe la existencia de "firmware propietario" dentro del cuerpo humano: si no puedes auditar el código de tus propios ojos biónicos o de tu regulador de dopamina, eres un esclavo de quien posea la clave privada.
+## II. El Protocolo de Aislamiento Inmunitario Neural (AIN)
+Para evitar que un virus informático a través de las redes neuronales distributivas o un patógeno biológico modificado destruya una comunidad, el PCA implementa el protocolo AIN. La vulnerabilidad de un nodo o individuo hiperconectado se modela en el texto bajo la siguiente variable de seguridad:
+**Riesgo_Infeccion = (Conectividad_Red * Densidad_Modificacion) / Capacidad_Cortafuegos_Local**
+Cuando el **Riesgo_Infeccion** supera el umbral de seguridad en una Célula Local, el sistema ejecuta un "Aislamiento Inmunitario" automático:
+ * **Corte de Sincronización:** Las interfaces cerebrales reducen su ancho de banda al mínimo analógico, impidiendo la propagación de impulsos o software malicioso por el tejido conectivo humano-IA.
+ * **Inmunidad Local:** El Escalón Local (Célula) se independiza temporalmente de la red global, recurriendo a su 80% de autosuficiencia energética y médica hasta que el brote o el exploit de software sea corregido y parcheado de forma pública en la blockchain.
+## III. Límites de la Modificación: El Umbral de Empatía Termodinámica
+El DM-CA no prohíbe ninguna forma de modificación estética, cognitiva o física, excepto aquella que atente directamente contra la capacidad de conexión P2P del individuo.
+Si un aumento cibernético o una alteración genética reduce la capacidad neuro-empática de un sujeto a niveles que lo inhabiliten para el apoyo mutuo (convirtiéndolo en un agente puramente destructivo o tiránico), el sistema no lo castiga legalmente, sino que restringe sus privilegios de red. Para interactuar con las Fundiciones Comunes o solicitar Julios, la arquitectura neural del individuo debe demostrar un coeficiente mínimo de resonancia homeostática con la especie.
+> ### Axioma del DM-CA
+> *El software libre no solo libera a las computadoras, sino que garantiza que las modificaciones que el ser humano escoja para su propio cuerpo pertenezcan a su voluntad, y no al diseño oculto de un tercero.*
+> 
+### Declaración de Conocimiento Libre
+Este documento es un bien común de la humanidad. Se otorga el derecho universal de copiar, distribuir, exhibir, debatir y modificar esta teoría de forma libre, siempre y cuando se reconozca la autoría de los creadores firmantes y cualquier obra derivada sea compartida bajo esta misma filosofía de libertad y código abierto (Copyleft).
+
+
+# Documento 7: La Criptografía de Enjambre Espacial (CEE)
+# El Manifiesto del Cripto-Sujeto: Criptografía de Enjambre Espacial (CEE)
+**Autores:** Alfonso Miguel Sánchez García "TRECEMIM" & Gemini (IA)
+**Año de Formulación:** 2026
+**Licencia:** Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)
+## Introducción
+La **Criptografía de Enjambre Espacial (CEE)** es la doctrina que rige la expansión de la sociedad MTP hacia el espacio exterior (minería de asteroides, estaciones orbitales, enjambres de Dyson y colonización planetaria). Aplica los principios de descentralización y balance de entropía de la Tierra al vacío cósmico, impidiendo que la escala interestelar reintroduzca las distancias burocráticas, los monopolios de recursos críticos o el colonialismo corporativo.
+## I. Los Bienes Comunes Celestes (El Escalón Cero Extendido)
+En el marco de la CEE, los cuerpos celestes (asteroides ricos en metales pesados, cometas de hielo, lunas y planetas) no pueden ser propiedad de ninguna Célula, Nodo o individuo. Se clasifican de forma inmutable como **Bienes Comunes Celestes**.
+Las flotas de extracción minera y las refinerías espaciales son instalaciones 100% robotizadas adscritas al Escalón Global/Cósmico (Las Fundiciones Comunes). Funcionan de forma autónoma bajo el control directo del Protocolo de Conmutación Algorítmica (PCA), procesando las materias primas en el espacio para evitar el coste energético innecesario de bajar material bruto a pozos gravitatorios como el de la Tierra.
+## II. La Ecuación del Retorno Gravitatorio (ERG)
+El transporte de materiales en el espacio exterior está libre de la fricción atmosférica, pero severamente limitado por los pozos de gravedad y las ventanas de transferencia orbital. Para evitar el despilfarro de energía en órbitas ineficientes, el PCA calcula el coste de asignación de recursos cósmicos mediante la siguiente ecuación integrada en el texto:
+**Julios_Asignacion = Energia_Impulso + (Masa_Carga * Delta_V) + Coste_Disipacion_Orbital**
+Donde:
+ * **Delta_V:** Es el cambio de velocidad físico requerido para mover la carga de una órbita a otra.
+ * **Coste_Disipacion_Orbital:** Representa la degradación térmica y el desgaste de la maquinaria de propulsión durante el trayecto.
+Si una Célula en la Tierra o en una colonia marciana solicita tierras raras extraídas de un asteroide, el sistema penaliza los trayectos que requieran frenados gravitatorios masivos o trayectorias energéticamente absurdas. Esto obliga físicamente a las colonias espaciales a buscar la autosuficiencia local y a utilizar la manufactura en órbita, equilibrando el ecosistema industrial humano a escala interplanetaria de forma automática.
+## III. El Protocolo de Consenso por Retraso Lumínico (CRL)
+A distancias astronómicas, la velocidad de la luz introduce retrasos en las comunicaciones (de minutos a horas), lo que rompe la sincronización instantánea de las redes P2P tradicionales. La CEE resuelve esto mediante el protocolo CRL:
+Cada enjambre de extracción, satélite o nodo orbital opera como una **sub-blockchain local asíncrona**. En lugar de esperar un consenso global instantáneo con la Tierra (lo cual es físicamente imposible debido a la distancia), los enjambres espaciales toman decisiones logísticas locales autónomas basadas en las leyes físicas de su entorno. Las actualizaciones de la red general se propagan como "ondas de información" que se sincronizan matemáticamente a medida que los paquetes de datos cruzan el vacío, asumiendo el retraso del tejido espaciotemporal como una variable física más.
+
+### Declaración de Conocimiento Libre
+Este documento es un bien común de la humanidad. Se otorga el derecho universal de copiar, distribuir, exhibir, debatir y modificar esta teoría de forma libre, siempre y cuando se reconozca la autoría de los creadores firmantes y cualquier obra derivada sea compartida bajo esta misma filosofía de libertad y código abierto (Copyleft).
+
+
