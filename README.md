@@ -1216,3 +1216,38 @@ class MTPReputationEngine:
         
         final_score = base_score - time_drain
         return max(0.0, round(final_score, 4))
+# core/consensus_validator.py
+import hashlib
+import time
+
+class MTPConsensusValidator:
+    def __init__(self, difficulty_target):
+        """
+        Prueba de Utilidad Termodinámica (PoTU). Seguridad cripto-física.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.target = difficulty_target
+
+    def validate_block_proportional_to_energy(self, block_data, nonce, energy_delivered_joules, node_entropy):
+        """A mayor energía útil real entregada al BCNH, más peso tiene el nodo."""
+        if node_entropy <= 0:
+            node_entropy = 0.001
+            
+        physical_multiplier = energy_delivered_joules / node_entropy
+        if physical_multiplier <= 0:
+            return {"valid": False, "msg": "Aportación física nula."}
+            
+        block_string = f"{block_data}{nonce}{energy_delivered_joules}".encode()
+        block_hash = hashlib.sha256(block_string).hexdigest()
+        
+        hash_value = int(block_hash, 16)
+        adjusted_target = self.target * physical_multiplier
+        
+        if hash_value < adjusted_target:
+            return {
+                "valid": True,
+                "hash": block_hash,
+                "adjusted_target": adjusted_target,
+                "timestamp": time.time()
+            }
+        return {"valid": False, "hash": block_hash}
