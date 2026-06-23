@@ -692,3 +692,38 @@ class MTPTransitionEngine:
             return True
         print(f"[NODO {self.node_id}] Balance energético insuficiente. Acumulando Julios...")
         return False
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MTP_LocalCell_BCNH_State",
+  "description": "Esquema estándar de intercambio de datos para la telemetría de Células Locales MTP",
+  "node_metadata": {
+    "node_id": "cell_es_local_node",
+    "timestamp_utc": 1782223077,
+    "software_version": "1.0.0-alpha"
+  },
+  "metrics": {
+    "calor": {
+      "energy_stored_joules": 450000000,
+      "efficiency_ratio": 0.92,
+      "status": "SURPLUS",
+      "auto_distribution_active": true
+    },
+    "calorias": {
+      "hydroponic_yield_kg": 120.5,
+      "water_reserve_liters": 5000,
+      "automated_cycles_passed": 42,
+      "status": "STABLE"
+    },
+    "conectividad": {
+      "bandwidth_mbps": 10000,
+      "mesh_peers_connected": 8,
+      "encryption_protocol": "ICS-Shield-v1",
+      "status": "OPTIMAL"
+    }
+  },
+  "negentropy_balance": {
+    "total_input_joules": 890000000,
+    "total_loss_entropy": 0.08,
+    "net_reputation_score": 145.2
+  }
+}
