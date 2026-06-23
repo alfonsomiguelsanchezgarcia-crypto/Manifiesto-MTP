@@ -1155,3 +1155,38 @@ Definición: La unidad básica de organización social y habitacional. Comunidad
 Definición: Protocolo legal y ético fundamental que prohíbe el software propietario dentro de la biología humana. Garantiza que cualquier interfaz cerebro-computadora o implante médico sea de código abierto y auditable, prohibiendo patentes, rastreo de pensamientos o publicidad integrada en el cuerpo.
 5. Inmunidad Cripto-Sujeta (ICS) / (Crypto-Subject Immunity)
 Definición: Mecanismo de defensa de hardware y software
+# core/demand_validator.py
+
+class VitalDemandValidator:
+    def __init__(self, num_inhabitants, room_volume_m3, thermal_loss_coeff):
+        """
+        Validador de demandas biológicas sin métricas de mercado.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.H = num_inhabitants
+        self.V = room_volume_m3
+        self.air_mass = room_volume_m3 * 1.225  # Densidad del aire en kg/m3
+        self.C_p = 1005  # Capacidad calorífica en J/kg*K
+        self.k_loss = thermal_loss_coeff
+
+    def calculate_thermal_demand_joules(self, t_exterior_c):
+        """Calcula los Julios necesarios para mantener la homeostasis (20°C)."""
+        T_confort = 20.0
+        if t_exterior_c >= T_confort:
+            return 0.0
+            
+        delta_t = T_confort - t_exterior_c
+        q_needed = (self.air_mass * self.C_p * delta_t) * (1 + self.k_loss)
+        return round(q_needed, 2)
+
+    def calculate_caloric_requirement_joules(self):
+        """Retorna la demanda metabólica diaria de la célula en Julios."""
+        JOULES_PER_HUMAN = 8400000  # 2000 kcal en Julios
+        merma_factor = 1.15  # 15% de margen de seguridad
+        return round(self.H * JOULES_PER_HUMAN * merma_factor, 2)
+
+    def get_minimum_bandwidth_bps(self, active_peers):
+        """Calcula el ancho de banda base para la sincronía Mesh."""
+        BASE_SYNC_BPS = 250000  # 250 kbps por nodo para telemetría
+        crypto_overhead = 1.25  # 25% por cifrado de seguridad
+        return round((active_peers * BASE_SYNC_BPS) * crypto_overhead, 2)
