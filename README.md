@@ -1289,3 +1289,15 @@ R_n = [ (E_capturada * Eficiencia) / (1 + Entropía_generada) ] - (Degradación 
 ## 2. Propiedades Físicas del Sistema
 * **No Heredable y No Transferible:** La reputación está ligada exclusivamente a la firma criptográfica de la infraestructura física del nodo que produce el orden.
 * **Degradación Temporal por Entropía:** Si un nodo almacena recursos pero deja de mantener su infraestructura limpia y eficiente, el factor de degradación drena su reputación de forma irreversible. El estancamiento se penaliza matemáticamente.
+# 🛡️ Protocolo de Consenso: Prueba de Utilidad Termodinámica (PoTU)
+
+El protocolo de la MTP sustituye la validación de datos abstracta por validación física cruzada. Cada bloque de la red distribuida debe ir firmado por un hash que combine criptografía asimétrica con la telemetría de flujo energético real transferido.
+
+## 1. Resistencia a Ataques Virtuales (Inmunidad Cripto-Sujeta)
+En los sistemas tradicionales, un atacante puede crear miles de identidades virtuales falsas (Ataque Sybil) o acumular poder de cómputo para corromper la red. 
+
+En la MTP, la dificultad de validación se ajusta dinámicamente según la ecuación:
+
+Dificultad_Ajustada = Target_Base * (Energía_entregada / Entropía_nodo)
+
+Si un nodo virtual o un atacante externo intenta inundar la red con datos falsificados, su valor de `Energía_entregada` al plano real es igual a 0. El sistema bloquea automáticamente su capacidad de influencia de manera matemática. El software exige materia y energía reales para otorgar derecho de réplica en la red.
