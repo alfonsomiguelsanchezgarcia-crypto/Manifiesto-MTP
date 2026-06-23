@@ -1251,3 +1251,30 @@ class MTPConsensusValidator:
                 "timestamp": time.time()
             }
         return {"valid": False, "hash": block_hash}
+# 📑 Ecuaciones de Demanda y Mínimos Vitales Ciegos
+
+Este módulo describe los principios físicos que ejecutan los nodos de la MTP para calcular la demanda biológica de los habitantes adscritos a una Célula Local, abstrayéndose por completo de cualquier métrica monetaria.
+
+## 1. Homeostasis Térmica ($Q_{vital}$)
+El sistema calcula los Julios necesarios para mantener el espacio habitacional dentro del rango de estabilidad humana (18°C - 22°C):
+
+Q_vital = m * C_p * (T_confort - T_exterior) + Coef_pérdidas
+
+Donde:
+* m: Masa de aire dentro del módulo habitacional (kg).
+* C_p: Capacidad calorífica específica del aire (~1005 J/kg·K).
+* T_confort: Temperatura de estabilidad biológica (20°C).
+* T_exterior: Temperatura ambiente capturada por los sensores en tiempo real.
+
+## 2. Balance de Masa Biogénica ($C_{vital}$)
+La alimentación se procesa como un vector de macronutrientes y agua, calculando los ciclos de producción de los sistemas hidropónicos y aeropónicos automatizados:
+
+C_vital = H * (E_basal * factor_merma)
+
+Donde:
+* H: Número de habitantes de la célula.
+* E_basal: Gasto energético diario promedio por individuo (~8.400.000 Julios o 2000 kcal).
+* factor_merma: Coeficiente de pérdida de biomasa en cosechas.
+
+## 3. Ancho de Banda Negentrópico ($B_{vital}$)
+Garantiza el canal de comunicación mínimo para la sincronización criptográfica del estado de la red Mesh sin colapsar el sistema.
