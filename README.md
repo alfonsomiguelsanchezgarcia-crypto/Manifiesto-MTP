@@ -1301,3 +1301,29 @@ En la MTP, la dificultad de validación se ajusta dinámicamente según la ecuac
 Dificultad_Ajustada = Target_Base * (Energía_entregada / Entropía_nodo)
 
 Si un nodo virtual o un atacante externo intenta inundar la red con datos falsificados, su valor de `Energía_entregada` al plano real es igual a 0. El sistema bloquea automáticamente su capacidad de influencia de manera matemática. El software exige materia y energía reales para otorgar derecho de réplica en la red.
+# 📑 Ecuaciones de Demanda y Necesidades Ciegas
+
+Este módulo describe los principios físicos que ejecutan los nodos de la MTP para calcular la demanda biológica y de conectividad de los habitantes de una Célula Local, abstrayéndose de cualquier métrica monetaria tradicional.
+
+## 1. Calor ($Q_{vital}$): Homeostasis Térmica
+El sistema calcula los Julios necesarios para mantener el espacio habitacional dentro del rango de estabilidad biológica humana (20°C).
+
+$$Q_{vital} = m \cdot C_p \cdot (T_{confort} - T_{exterior}) + \Sigma Q_{perdidas}$$
+
+* `m`: Masa de aire dentro del módulo habitacional ($kg$).
+* `C_p`: Capacidad calorífica específica del aire ($\approx 1005 \, J/kg\cdot K$).
+* `T_confort`: Temperatura de confort objetivo ($293.15 \, K$ o 20°C).
+* `T_exterior`: Temperatura ambiente capturada en tiempo real.
+
+## 2. Calorías ($C_{vital}$): Masa Biogénica
+La alimentación se procesa como un vector de macronutrientes y agua, calculando los ciclos de producción de los sistemas hidropónicos automatizados de la célula.
+
+$$C_{vital} = \sum_{i=1}^{H} \left( E_{basal} \cdot \gamma \right)$$
+
+* `E_{basal}`: Gasto energético diario promedio por individuo ($\approx 8.4 \times 10^6 \, J$ o $2000 \, kcal$).
+* `\gamma`: Factor de eficiencia y merma del cultivo.
+
+## 3. Conectividad ($B_{vital}$): Ancho de Banda Negentrópico
+Canal de comunicación mínimo para la sincronización criptográfica del estado de la red Mesh.
+
+$$B_{vital} = N_{peers} \cdot \beta_{sync} + \Delta D_{cripto}$$
