@@ -927,3 +927,17 @@ class MTPConsensusValidator:
                 "timestamp": time.time()
             }
         return {"valid": False, "hash": block_hash}
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py      <-- Absorción irreversible de capital fíat
+│   ├── bcnh_schema.json          <-- Telemetría e idioma común P2P
+│   ├── demand_validator.py       <-- Ecuaciones de mínimos biológicos (Homeostasis)
+│   ├── reputation_engine.py      <-- Score negentrópico anti-acumulación
+│   └── consensus_validator.py    <-- Cierre: Prueba de Utilidad Termodinámica (PoTU)
+├── docs/
+│   ├── TRANSITION_PROTOCOL.md    <-- Teoría de la transición sistémica
+│   ├── VITAL_DEMAND.md           <-- Especificación matemática de necesidades
+│   ├── REPUTATION_ENGINE.md      <-- Filosofía de la degradación temporal
+│   └── SECURITY_CONSENSU.md      <-- Criterios de inmunidad cripto-física
+├── CONTRIBUTING.md               <-- Guía de estilo y stack para colaboradores
+└── README.md                     <-- Manifiesto raíz de producción TRECEMIM & Gemini
