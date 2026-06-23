@@ -1,3 +1,49 @@
+# core/consensus_validator.py
+import hashlib
+import time
+
+class MTPConsensusValidator:
+    def __init__(self, difficulty_target):
+        """
+        Inicializa el motor de consenso PoTU.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.target = difficulty_target
+
+    def validate_block_proportional_to_energy(self, block_data, nonce, energy_delivered_joules, node_entropy):
+        """
+        Valida el hash de un bloque aplicando el multiplicador físico de la MTP.
+        A mayor energía real entregada y menor entropía, más fácil es validar el bloque.
+        """
+        if node_entropy <= 0:
+            node_entropy = 0.001 # Prevenir división por cero
+            
+        # 1. Calcular el factor de amplificación física (Fórmula PoTU)
+        physical_multiplier = energy_delivered_joules / node_entropy
+        
+        # Si el nodo no aporta energía física real, su capacidad de minado es nula
+        if physical_multiplier <= 0:
+            return False
+            
+        # 2. Reconstruir la cadena de texto para el Hash
+        block_string = f"{block_data}{nonce}{energy_delivered_joules}".encode()
+        block_hash = hashlib.sha256(block_string).hexdigest()
+        
+        # 3. Conversión del hash a valor numérico para evaluar dificultad
+        hash_value = int(block_hash, 16)
+        
+        # Ajustar el target dinámicamente con la física del nodo
+        adjusted_target = self.target * physical_multiplier
+        
+        # El consenso se cumple si el hash es menor que el target ajustado
+        if hash_value < adjusted_target:
+            return {
+                "valid": True,
+                "hash": block_hash,
+                "adjusted_target": adjusted_target,
+                "timestamp": time.time()
+            }
+        return {"valid": False, "hash": block_hash}
 
 *Las grandes revoluciones no se votan en despachos, se programan en la realidad física. Bienvenidos al futuro pos-monetario.* Que es esto?# 🌐 Matriz Termodinámica de la Producción (MTP)
 > **El plano bio-digital e industrial para una sociedad basada en las leyes de la física y la soberanía humana.**
