@@ -727,3 +727,21 @@ class MTPTransitionEngine:
     "net_reputation_score": 145.2
   }
 }
+# 🤝 Guía de Contribución a la Infraestructura MTP
+
+Agradecemos tu interés en colaborar con el desarrollo del ecosistema de la MTP. No buscamos debate ideológico, sino optimización algorítmica y código de producción. Aquí tienes las directrices para empezar a enviar tus aportaciones.
+
+## 🛠️ Requisitos Técnicos
+* **Lenguaje Principal:** Python 3.10 o superior.
+* **Formatos de Datos:** JSON estricto para mensajería entre nodos de red.
+* **Estructura de Red:** Enfoque P2P Descentralizado (arquitecturas Mesh sin servidores centrales).
+
+## 🎯 Prioridades del Desarrollo Actual (Fase Alpha)
+
+1. **Optimización del motor de conversión (`absorption_engine.py`):** Integrar conectores con oráculos de datos físicos (clima, eficiencia solar en tiempo real) para refinar el cálculo matemático de los Julios reales aportados.
+2. **Algoritmos de Enrutamiento Mesh:** Programar la lógica que permita a un nodo en estado `CRITICAL` solicitar automáticamente el excedente de energía térmica o de datos de los nodos adyacentes en estado `SURPLUS`.
+3. **Módulo de Entropía Dinámica:** Diseñar funciones matemáticas que calculen el desgaste físico del hardware de la célula local y actualicen de forma automatizada la métrica `net_reputation_score`.
+
+## ⚙️ Proceso de Envío (Pull Requests)
+* Asegúrate de que todo el código nuevo incluya comentarios detallados explicando el principio termodinámico que sustenta la función.
+* No se aceptarán pull requests que añadan pasarelas de pago, tokens especulativos o variables monetarias tradicionales. El sistema solo opera con unidades físicas reales.
