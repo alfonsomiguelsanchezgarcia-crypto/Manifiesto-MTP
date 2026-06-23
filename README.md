@@ -559,3 +559,10 @@ class MTPTransitionEngine:
             return True
         return False
 
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py      <-- El script de arriba
+│   └── thermodynamics.py         <-- Fórmulas de cálculo de Julios
+├── docs/
+│   └── TRANSITION_PROTOCOL.md    <-- La explicación teórica
+└── README.md                     <-- El manifiesto general
