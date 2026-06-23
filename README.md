@@ -823,3 +823,15 @@ class MTPReputationEngine:
         
         # La reputación nunca puede ser inferior a cero (límite físico de muerte térmica)
         return max(0.0, round(final_score, 4))
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py
+│   ├── bcnh_schema.json
+│   ├── demand_validator.py
+│   └── reputation_engine.py      <-- NUEVO: Motor de reputación física
+├── docs/
+│   ├── TRANSITION_PROTOCOL.md
+│   ├── VITAL_DEMAND.md
+│   └── REPUTATION_ENGINE.md      <-- NUEVA: Lógica anti-acumulación
+├── CONTRIBUTING.md
+└── README.md
