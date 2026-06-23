@@ -787,3 +787,39 @@ class VitalDemandValidator:
 │   └── VITAL_DEMAND.md           <-- NUEVA: Documentación matemática
 ├── CONTRIBUTING.md
 └── README.md
+# core/reputation_engine.py
+import time
+
+class MTPReputationEngine:
+    def __init__(self, base_degradation_rate=0.05):
+        """
+        Inicializa el motor de reputación negentrópica.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.delta = base_degradation_rate # Ritmo de pérdida de reputación pasiva
+
+    def calculate_node_reputation(self, energy_joules, efficiency, entropy_generated, last_update_timestamp):
+        """
+        Calcula el score neto aplicando degradación por entropía temporal.
+        A mayor desperdicio (entropy_generated), el score cae exponencialmente.
+        """
+        if efficiency < 0 or efficiency > 1:
+            raise ValueError("La eficiencia debe estar entre 0 y 1.")
+            
+        # 1. Cálculo de la producción útil neta
+        useful_energy = energy_joules * efficiency
+        
+        # 2. Penalización por entropía/desperdicio generado localmente
+        base_score = useful_energy / (1.0 + entropy_generated)
+        
+        # 3. Aplicar drenaje temporal (la entropía no duerme)
+        current_time = time.time()
+        time_elapsed = current_time - last_update_timestamp
+        
+        # Degradación lineal basada en el tiempo transcurrido (en segundos o ciclos)
+        time_drain = self.delta * (time_elapsed / 3600) # Degradación por hora
+        
+        final_score = base_score - time_drain
+        
+        # La reputación nunca puede ser inferior a cero (límite físico de muerte térmica)
+        return max(0.0, round(final_score, 4))
