@@ -601,3 +601,11 @@ class MTPTransitionEngine:
     "net_reputation_score": 145.2
   }
 }
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py      <-- El motor de ayer
+│   ├── bcnh_schema.json          <-- El archivo que acabamos de crear
+│   └── thermodynamics.py
+├── docs/
+│   └── TRANSITION_PROTOCOL.md
+└── README.md
