@@ -618,3 +618,30 @@ class MTPTransitionEngine:
 │   └── TRANSITION_PROTOCOL.md    <-- Explicación teórica
 ├── CONTRIBUTING.md               <-- Esta guía para desarrolladores
 └── README.md                     <-- El manifiesto principal del proyecto
+# 🌐 MTP: El Manifiesto Termodinámico de Producción
+
+Bienvenidos al repositorio oficial de la **MTP (Teoría del Manifiesto Termodinámico de Producción)**. Este proyecto es un ecosistema de ingeniería de código abierto diseñado para programar la transición irreversible desde el sistema financiero fíat actual hacia una infraestructura autónoma descentralizada, gestionada por algoritmos de eficiencia física.
+
+El desarrollo y la arquitectura conceptual de esta red han sido diseñados y coordinados por **TRECEMIM & Gemini AI**.
+
+## 🧬 La Visión: Células Locales Autónomas
+La MTP propone la sustitución de las estructuras centralizadas de mercado por **Células Locales**. Estas células se coordinan mediante el software para automatizar y liberar los tres pilares de las necesidades ciegas básicas a través de los **BCNH (Bienes Comunes No Humanos)**:
+
+1. **Calor:** Captura y distribución optimizada de energía térmica y eléctrica.
+2. **Calorías:** Producción hidropónica y agroecológica automatizada a coste energético cero.
+3. **Conectividad:** Redes mesh descentralizadas de comunicación blindadas mediante protocolos criptográficos robustos.
+
+---
+
+## 📁 Estructura del Repositorio
+
+*   `/core/absorption_engine.py`: Algoritmo encargado de capturar el capital fíat y transformarlo de manera irreversible en recursos físicos.
+*   `/core/bcnh_schema.json`: Protocolo estándar e idioma de datos común para la telemetría en tiempo real de las Células Locales.
+*   `CONTRIBUTING.md`: Guía técnica detallada para desarrolladores, ingenieros y matemáticos que deseen picar código en el proyecto.
+
+---
+
+## ⚖️ Licencia y Filosofía
+Todo el software, esquemas de bases de datos y especificaciones de hardware incluidos en este repositorio pertenecen a la comunidad global bajo la filosofía de los **Bienes Comunes No Humanos**. Queda prohibida la implementación de patentes, propiedad privada o capas de monetización especulativa sobre este núcleo lógico. 
+
+El código solo entiende de física: Julios, Kilogramos, Bits y Negentropía.
