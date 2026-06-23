@@ -609,3 +609,12 @@ class MTPTransitionEngine:
 ├── docs/
 │   └── TRANSITION_PROTOCOL.md
 └── README.md
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py      <-- Motor de conversión de capital
+│   ├── bcnh_schema.json          <-- Base de datos de recursos vitales
+│   └── thermodynamics.py         <-- Motor de cálculo físico
+├── docs/
+│   └── TRANSITION_PROTOCOL.md    <-- Explicación teórica
+├── CONTRIBUTING.md               <-- Esta guía para desarrolladores
+└── README.md                     <-- El manifiesto principal del proyecto
