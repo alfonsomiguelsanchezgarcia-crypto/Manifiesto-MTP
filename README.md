@@ -777,3 +777,13 @@ class VitalDemandValidator:
         BASE_SYNC_BPS = 250000 # 250 kbps por nodo para telemetría pura
         crypto_overhead = 1.25 # 25% extra por cifrado ICS
         return round((active_peers * BASE_SYNC_BPS) * crypto_overhead, 2)
+├── core/
+│   ├── __init__.py
+│   ├── absorption_engine.py
+│   ├── bcnh_schema.json
+│   └── demand_validator.py       <-- NUEVO: Validador de mínimos físicos
+├── docs/
+│   ├── TRANSITION_PROTOCOL.md
+│   └── VITAL_DEMAND.md           <-- NUEVA: Documentación matemática
+├── CONTRIBUTING.md
+└── README.md
