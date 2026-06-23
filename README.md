@@ -645,3 +645,50 @@ La MTP propone la sustitución de las estructuras centralizadas de mercado por *
 Todo el software, esquemas de bases de datos y especificaciones de hardware incluidos en este repositorio pertenecen a la comunidad global bajo la filosofía de los **Bienes Comunes No Humanos**. Queda prohibida la implementación de patentes, propiedad privada o capas de monetización especulativa sobre este núcleo lógico. 
 
 El código solo entiende de física: Julios, Kilogramos, Bits y Negentropía.
+import time
+
+class MTPTransitionEngine:
+    def __init__(self, node_id):
+        """
+        Inicializa un nodo de la Célula Local MTP.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.node_id = node_id
+        self.bcnh_assets = {"calor": 0, "calorias": 0, "conectividad": 0}
+        self.energy_pool_joules = 0.0
+
+    def absorb_fiat(self, fiat_amount, resource_type, physical_efficiency):
+        """
+        Convierte capital fíat en infraestructura física de los BCNH.
+        El dinero abstracto se devalúa; el recurso físico se libera en la red.
+        """
+        if fiat_amount <= 0:
+            raise ValueError("Flujo de capital entrante inválido.")
+            
+        # Calcular el impacto negentrópico real (Julios ganados u optimizados en el plano físico)
+        negentropy_yield = fiat_amount * physical_efficiency
+        self.energy_pool_joules += negentropy_yield
+        
+        # Asignación directa e irrevocable a las tres necesidades básicas ciegas
+        if resource_type in self.bcnh_assets:
+            self.bcnh_assets[resource_type] += negentropy_yield
+            print(f"[NODO {self.node_id}] {fiat_amount} Fíat absorbido con éxito.")
+            print(f"-> {negentropy_yield} Julios netos inyectados en el buffer de {resource_type.upper()}.")
+        else:
+            # Si el recurso no es vital, su prioridad decae drásticamente en el sistema
+            self.energy_pool_joules += (negentropy_yield * 0.1)
+            print(f"[NODO {self.node_id}] Advertencia: Recurso no prioritario. Eficiencia penalizada.")
+            
+        return self.energy_pool_joules
+
+    def distribute_vital_surplus(self):
+        """
+        Evalúa si la Célula Local ha alcanzado la autosuficiencia energética
+        para activar la distribución de recursos vitales a coste cero.
+        """
+        UMBRAL_AUTOSUFICIENCIA = 1000000.0  # Julios netos estables
+        if self.energy_pool_joules >= UBRAL_AUTOSUFICIENCIA:
+            print(f"[NODO {self.node_id}] Supervivencia local garantizada. Algoritmo de coste cero: ACTIVO.")
+            return True
+        print(f"[NODO {self.node_id}] Balance energético insuficiente. Acumulando Julios...")
+        return False
