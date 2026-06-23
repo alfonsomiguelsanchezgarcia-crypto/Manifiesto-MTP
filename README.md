@@ -520,4 +520,42 @@ Para entender cómo funcionan todas las reglas de la Matriz en el mundo real, aq
 * Gastar energía en teatro es ineficiente para las máquinas, pero es el verdadero indicador de éxito de la MTP: cuanto más arte libre y bello produzcan los humanos, significa que el software subyacente es más eficiente automatizando la supervivencia.
 
 ---
+import time
+
+class MTPTransitionEngine:
+    def __init__(self, node_id):
+        self.node_id = node_id
+        self.bcnh_assets = {"calor": 0, "calorias": 0, "conectividad": 0}
+        self.energy_pool_joules = 0.0
+
+    def absorb_fiat(self, fiat_amount, resource_type, physical_efficiency):
+        """
+        Convierte capital fíat en infraestructura física de los BCNH.
+        El dinero muere aquí; el recurso físico se libera.
+        """
+        if fiat_amount <= 0:
+            raise ValueError("Flujo de capital inválido.")
+            
+        # Calcular el impacto negentrópico real (Julios ganados/optimizados)
+        negentropy_yield = fiat_amount * physical_efficiency
+        self.energy_pool_joules += negentropy_yield
+        
+        # Asignación directa a las tres necesidades básicas ciegas
+        if resource_type in self.bcnh_assets:
+            self.bcnh_assets[resource_type] += negentropy_yield
+            print(f"[NODO {self.node_id}] {fiat_amount} Fíat absorbido. {negentropy_yield} Julios inyectados en {resource_type.upper()}.")
+        else:
+            # Si no es un recurso vital, se degrada su prioridad en el buffer
+            self.energy_pool_joules += (negentropy_yield * 0.1)
+            
+        return self.energy_pool_joules
+
+    def distribute_vital_surplus(self):
+        """
+        Garantiza coste cero de supervivencia si el pool de energía es positivo.
+        """
+        if self.energy_pool_joules > 1000000: # Umbral mínimo de autosuficiencia
+            print("Supervivencia local garantizada. Distribución a coste cero activa.")
+            return True
+        return False
 
