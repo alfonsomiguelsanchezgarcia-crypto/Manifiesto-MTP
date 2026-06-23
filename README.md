@@ -745,3 +745,35 @@ Agradecemos tu interés en colaborar con el desarrollo del ecosistema de la MTP.
 ## ⚙️ Proceso de Envío (Pull Requests)
 * Asegúrate de que todo el código nuevo incluya comentarios detallados explicando el principio termodinámico que sustenta la función.
 * No se aceptarán pull requests que añadan pasarelas de pago, tokens especulativos o variables monetarias tradicionales. El sistema solo opera con unidades físicas reales.
+# core/demand_validator.py
+
+class VitalDemandValidator:
+    def __init__(self, num_inhabitants, room_volume_m3, thermal_loss_coeff):
+        self.H = num_inhabitants
+        self.V = room_volume_m3
+        self.air_mass = room_volume_m3 * 1.225 # Densidad aprox del aire en kg/m3
+        self.C_p = 1005 # J/kg*K
+        self.k_loss = thermal_loss_coeff
+
+    def calculate_thermal_demand_joules(self, t_exterior_c):
+        """Calcula los Julios necesarios para mantener la homeostasis."""
+        T_confort = 20.0
+        if t_exterior_c >= T_confort:
+            return 0.0 # No se requiere calor activo
+            
+        delta_t = T_confort - t_exterior_c
+        # Q = m * C_p * delta_T + pérdidas estructurales
+        q_needed = (self.air_mass * self.C_p * delta_t) * (1 + self.k_loss)
+        return round(q_needed, 2)
+
+    def calculate_caloric_requirement_joules(self):
+        """Retorna la demanda metabólica diaria de la célula en Julios."""
+        JOULES_PER_HUMAN = 8400000 # 2000 kcal en Julios
+        merma_factor = 1.15 # 15% de margen de seguridad en la producción
+        return round(self.H * JOULES_PER_HUMAN * merma_factor, 2)
+
+    def get_minimum_bandwidth_bps(self, active_peers):
+        """Calcula el ancho de banda base para no perder sincronía Mesh."""
+        BASE_SYNC_BPS = 250000 # 250 kbps por nodo para telemetría pura
+        crypto_overhead = 1.25 # 25% extra por cifrado ICS
+        return round((active_peers * BASE_SYNC_BPS) * crypto_overhead, 2)
