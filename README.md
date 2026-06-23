@@ -1190,3 +1190,29 @@ class VitalDemandValidator:
         BASE_SYNC_BPS = 250000  # 250 kbps por nodo para telemetría
         crypto_overhead = 1.25  # 25% por cifrado de seguridad
         return round((active_peers * BASE_SYNC_BPS) * crypto_overhead, 2)
+# core/reputation_engine.py
+import time
+
+class MTPReputationEngine:
+    def __init__(self, base_degradation_rate=0.05):
+        """
+        Motor de reputación negentrópica. El sustituto del capital abstracto.
+        Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.delta = base_degradation_rate  # Ritmo de pérdida de reputación pasiva
+
+    def calculate_node_reputation(self, energy_joules, efficiency, entropy_generated, last_update_timestamp):
+        """La falta de mantenimiento o el estancamiento drena el score automáticamente."""
+        if efficiency < 0 or efficiency > 1:
+            raise ValueError("La eficiencia debe estar entre 0 y 1.")
+            
+        useful_energy = energy_joules * efficiency
+        base_score = useful_energy / (1.0 + entropy_generated)
+        
+        # Aplicar drenaje temporal por entropía universal
+        current_time = time.time()
+        time_elapsed = current_time - last_update_timestamp
+        time_drain = self.delta * (time_elapsed / 3600)  # Pérdida por hora
+        
+        final_score = base_score - time_drain
+        return max(0.0, round(final_score, 4))
