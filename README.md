@@ -1314,3 +1314,19 @@ $$R_n(t) = \left( \frac{E_{capturada} \cdot \eta}{1 + S_{generada}} \right) - \d
 * `(t - t_0)`: Tiempo transcurrido desde la última validación activa.
 
 > **Propiedad Clave:** La acumulación pasiva es matemáticamente imposible. Si un nodo deja de mantener su infraestructura, su reputación decae de forma irreversible hacia la muerte térmica (cero).
+# 🛡️ Protocolo de Consenso: Prueba de Utilidad Termodinámica (PoTU)
+
+El protocolo de la MTP sustituye la validación de bloques abstracta por la validación física. Cada bloque de datos debe ir firmado por un hash que combine criptografía asimétrica con la telemetría de flujo energético real verificado por los nodos vecinos (auditoría cruzada).
+
+## Mecánica de Validación
+Para que un nuevo bloque sea añadido al libro mayor descentralizado, el nodo proponente debe generar una prueba matemática que satisfaga la siguiente condición:
+
+$$\text{Hash}(B_n \,||\, \text{Nonce}) < \text{Target} \cdot \left( \frac{E_{entregada}}{\Delta S_{nodo}} \right)$$
+
+* `B_n`: Contenido del bloque actual (métricas del JSON, logs de recursos).
+* `Nonce`: El número aleatorio criptográfico tradicional.
+* `E_{entregada}`: Julios netos transferidos con éxito a los sistemas comunes.
+* `\Delta S_{nodo}`: Tasa de entropía interna del nodo.
+
+## Inmunidad Cripto-Sujeta (ICS)
+Si un atacante intenta inundar la red con nodos virtuales falsificados (Ataque Sybil), el sistema los descarta automáticamente debido a que los nodos virtuales poseen un valor de $E_{entregada} = 0$. El software exige materia y energía reales para otorgar derecho de réplica y voto en la red.
