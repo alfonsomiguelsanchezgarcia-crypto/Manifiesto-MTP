@@ -1298,3 +1298,19 @@ $$R_n(t) = \left( \frac{E_{capturada} \cdot \eta}{1 + S_{generada}} \right) - \d
 * `(t - t_0)`: Tiempo transcurrido desde la última validación activa.
 
 > **Propiedad Clave:** La acumulación pasiva es matemáticamente imposible. Si un nodo deja de mantener su infraestructura, su reputación decae de forma irreversible hacia la muerte térmica (cero).
+# 🪙 Mecánica de la Reputación Negentrópica
+
+El `net_reputation_score` ($R_n$) es la métrica descentralizada que determina la capacidad de influencia de un nodo dentro de la red MTP. No mide riqueza acumulada, mide eficiencia termodinámica y aportación neta de orden al sistema.
+
+## La Ecuación Fundamental de Reputación
+El saldo de reputación de un nodo se calcula mediante la relación entre la energía útil capturada, la entropía disipada y un factor de degradación temporal obligatoria:
+
+$$R_n(t) = \left( \frac{E_{capturada} \cdot \eta}{1 + S_{generada}} \right) - \delta \cdot (t - t_0)$$
+
+* `E_{capturada}`: Energía total neta en Julios introducida al BCNH.
+* `\eta`: Factor de eficiencia local ($0.0$ a $1.0$).
+* `S_{generada}`: Entropía o desperdicio generado (pérdidas térmicas, residuos).
+* `\delta`: Coeficiente de degradación temporal (entropía universal).
+* `(t - t_0)`: Tiempo transcurrido desde la última validación activa.
+
+> **Propiedad Clave:** La acumulación pasiva es matemáticamente imposible. Si un nodo deja de mantener su infraestructura, su reputación decae de forma irreversible hacia la muerte térmica (cero).
