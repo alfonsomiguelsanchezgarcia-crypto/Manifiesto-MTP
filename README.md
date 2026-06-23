@@ -1278,3 +1278,14 @@ Donde:
 
 ## 3. Ancho de Banda Negentrópico ($B_{vital}$)
 Garantiza el canal de comunicación mínimo para la sincronización criptográfica del estado de la red Mesh sin colapsar el sistema.
+# 🪙 Mecánica de la Reputación Negentrópica
+
+El `net_reputation_score` ($R_n$) es la métrica descentralizada que determina la capacidad de validación de un nodo dentro de la red MTP. No mide riqueza acumulada, mide **eficiencia y aportación neta de orden al sistema**.
+
+## 1. La Ecuación Antiacumulación
+
+R_n = [ (E_capturada * Eficiencia) / (1 + Entropía_generada) ] - (Degradación * Tiempo)
+
+## 2. Propiedades Físicas del Sistema
+* **No Heredable y No Transferible:** La reputación está ligada exclusivamente a la firma criptográfica de la infraestructura física del nodo que produce el orden.
+* **Degradación Temporal por Entropía:** Si un nodo almacena recursos pero deja de mantener su infraestructura limpia y eficiente, el factor de degradación drena su reputación de forma irreversible. El estancamiento se penaliza matemáticamente.
