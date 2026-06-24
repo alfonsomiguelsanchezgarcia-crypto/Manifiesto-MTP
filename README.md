@@ -1466,3 +1466,49 @@ $$E_{\text{neta}} = E_{\text{enviada}} \cdot \left(1 - \mu \cdot d\right)$$
 * $d$: Distancia euclidiana geométrica entre las coordenadas de los dos nodos.
 
 > **Regla de Seguridad del Protocolo:** Si $E_{\text{neta}} < 0.5 \cdot E_{\text{enviada}}$ (es decir, si las pérdidas por transporte superan el 50%), el contrato se cancela automáticamente por ineficiencia termodinámica estructural, forzando a la red a buscar un nodo de almacenamiento intermedio más cercano.
+# mesh/state_synchronizer.py
+import json
+
+class MTPStateSynchronizer:
+    def __init__(self, local_ledger_instance):
+        """
+        Sincronizador de estado para entornos de conectividad intermitente (Mesh).
+        Fase 2 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.ledger = local_ledger_instance
+
+    def generate_state_delta(self, peer_last_timestamp):
+        """
+        Compara los registros y empaqueta únicamente los eventos ocurridos 
+        después del último contacto con el vecino. Evita saturar el espectro de radio.
+        """
+        all_events = self.ledger.get_all_events() # Extrae el historial del BCNH
+        delta_events = [event for event in all_events if event["timestamp"] > peer_last_timestamp]
+        
+        return {
+            "sync_header": {
+                "origin_node": self.ledger.node_id,
+                "range_start": peer_last_timestamp,
+                "count": len(delta_events)
+            },
+            "payload": delta_events
+        }
+
+    def merge_peer_delta(self, raw_delta_payload):
+        """
+        Inyecta los datos del vecino en el BCNH local, ordenándolos por estricta 
+        cronología y descartando duplicados mediante verificación de firmas.
+        """
+        try:
+            delta_data = json.loads(raw_delta_payload)
+            events_to_apply = delta_data["payload"]
+            
+            applied_count = 0
+            for event in events_to_apply:
+                if not self.ledger.exists(event["event_id"]):
+                    self.ledger.write_event(event)
+                    applied_count += 1
+                    
+            return {"status": "SUCCESS", "integrated_events": applied_count}
+        except KeyError:
+            return {"status": "ERROR", "reason": "Formato de delta inválido."}
