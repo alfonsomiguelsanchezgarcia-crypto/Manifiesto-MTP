@@ -1650,3 +1650,50 @@ class MTPEnergyManager:
             "network_surplus_joules": surplus_declared,
             "node_status": "SURPLUS" if surplus_declared > 0 else "STABLE"
         }
+# hardware/fiat_decoupler.py
+import time
+
+class MTPFiatDecoupler:
+    def __init__(self, energy_manager_instance, required_stable_cycles=24):
+        """
+        Mecanismo de Desconexión Estructural.
+        Fase 3 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.energy_manager = energy_manager_instance
+        self.required_cycles = required_stable_cycles
+        self.stable_cycles_count = 0
+        self.system_decoupled = False
+
+    def audit_autarky_status(self, real_time_generation_joules):
+        """
+        Analiza si la célula es capaz de sostenerse de forma independiente.
+        Si mantiene excedentes o estabilidad durante los ciclos requeridos,
+        el sistema se independiza del todo.
+        """
+        if self.system_decoupled:
+            return {"status": "DECOUPLED", "message": "Autarquía total consolidada. Conexión externa extinta."}
+
+        # Auditar el comportamiento del flujo energético actual
+        metrics = self.energy_manager.optimize_energy_distribution(real_time_generation_joules)
+        
+        # Un ciclo es estable si las baterías no bajan del 30% y se cubren las necesidades vitales
+        if metrics["current_battery_soc_pct"] >= 30.0 and metrics["allocated_to_homeostasis"] >= 0:
+            self.stable_cycles_count += 1
+        else:
+            self.stable_cycles_count = 0  # Reseteo de seguridad si la célula entra en vulnerabilidad
+
+        # Condición de ruptura estructural
+        if self.stable_cycles_count >= self.required_cycles:
+            self.system_decoupled = True
+            return {
+                "status": "DECOUPLED",
+                "cycles_audited": self.stable_cycles_count,
+                "message": "CRÍTICO: Umbral de seguridad superado. Desconexión física ejecutada de forma permanente."
+            }
+
+        return {
+            "status": "TRANSITIONAL",
+            "stable_cycles_consecutive": self.stable_cycles_count,
+            "cycles_remaining": self.required_cycles - self.stable_cycles_count,
+            "battery_soc": metrics["current_battery_soc_pct"]
+        }
