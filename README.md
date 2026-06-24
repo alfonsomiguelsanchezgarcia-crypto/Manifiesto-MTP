@@ -1330,3 +1330,57 @@ $$\text{Hash}(B_n \,||\, \text{Nonce}) < \text{Target} \cdot \left( \frac{E_{ent
 
 ## Inmunidad Cripto-Sujeta (ICS)
 Si un atacante intenta inundar la red con nodos virtuales falsificados (Ataque Sybil), el sistema los descarta automáticamente debido a que los nodos virtuales poseen un valor de $E_{entregada} = 0$. El software exige materia y energía reales para otorgar derecho de réplica y voto en la red.
+# mesh/mesh_router.py
+import json
+import time
+
+class MTPMeshRouter:
+    def __init__(self, node_initializer, radio_frequency_mhz=868.0):
+        """
+        Enrutador Mesh por hardware de radiofrecuencia (LoRa/HF Base).
+        Fase 2 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.node = node_initializer
+        self.freq = radio_frequency_mhz
+        self.routing_table = {}  # Mapeo de nodos vecinos detectados por aire
+
+    def broadcast_vital_pulse(self):
+        """
+        Empaqueta el estado del nodo en un paquete de radio ultra-ligero.
+        No usa IPs, usa coordenadas y el estado del BCNH.
+        """
+        identity = self.node.get_node_identity()
+        pulse_packet = {
+            "v": "MTP-v2.0",
+            "nid": identity["node_id"],
+            "geo": identity["coordinates"],
+            "status": identity["status"],
+            "t": time.time()
+        }
+        # En el mundo real, este string de JSON se escupe por el puerto serie hacia la antena de radio
+        raw_radio_payload = json.dumps(pulse_packet)
+        return raw_radio_payload
+
+    def receive_peer_pulse(self, raw_radio_payload):
+        """Procesa el pulso recibido por el aire de otra célula vecina."""
+        try:
+            packet = json.loads(raw_radio_payload)
+            peer_id = packet["nid"]
+            
+            # Registra o actualiza el vecino en la tabla de enrutamiento local
+            self.routing_table[peer_id] = {
+                "geo": packet["geo"],
+                "status": packet["status"],
+                "last_seen": packet["t"],
+                "friccion_distancia": self._calculate_distance_friction(packet["geo"])
+            }
+            return f"Nodo {peer_id} mapeado con éxito."
+        except Exception:
+            return "Error: Paquete de radio corrupto o interferencia."
+
+    def _calculate_distance_friction(self, peer_geo):
+        """Calcula la distancia geométrica simple para evaluar la pérdida de energía en el transporte."""
+        my_geo = self.node.get_node_identity()["coordinates"]
+        dx = peer_geo["lat"] - my_geo["lat"]
+        dy = peer_geo["lon"] - my_geo["lon"]
+        return round((dx**2 + dy**2)**0.5, 4)
