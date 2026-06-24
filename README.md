@@ -1565,3 +1565,10 @@ class MTPHardwareBridge:
             "actuators_triggered": self.actuator_states,
             "log": action_log
         }
+# 🚜 Integración de Hardware Libre y Automatización Autárquica
+
+Este documento especifica los estándares de hardware abierto y electrónica analógica/digital necesarios para que el software de la MTP interactúe con el entorno físico, logrando la automatización de los mínimos vitales sin depender de tecnologías propietarias.
+
+## 1. Arquitectura del Sistema de Control (Capa Física)
+La Célula Local utiliza microcontroladores de código abierto (arquitecturas tipo ESP32, Raspberry Pi RP2040 o Arduino) conectados a través de buses de comunicación industriales tolerantes a fallos (como I2C o RS-485 Modbus).
+
