@@ -1697,3 +1697,18 @@ class MTPFiatDecoupler:
             "cycles_remaining": self.required_cycles - self.stable_cycles_count,
             "battery_soc": metrics["current_battery_soc_pct"]
         }
+MTP_Project/
+├── docs/
+│   ├── MESH_PROTOCOL.md          # Física del enrutamiento por radio
+│   └── HARDWARE_INTEGRATION.md   # Especificación de electrónica libre
+├── mesh/
+│   ├── __init__.py
+│   ├── mesh_router.py            # Descubrimiento de nodos vecinos
+│   ├── resource_exchange.py      # Viabilidad física de envíos
+│   └── state_synchronizer.py     # Sincronización de deltas de datos
+├── hardware/
+│   ├── __init__.py
+│   ├── hardware_bridge.py        # Conexión con sensores y relés reales
+│   ├── energy_manager.py         # Distribución inteligente de Julios
+│   └── fiat_decoupler.py         # El interruptor de desconexión final
+└── README.md                     # Manifiesto y registro de la Fase 1
