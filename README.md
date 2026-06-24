@@ -1512,3 +1512,56 @@ class MTPStateSynchronizer:
             return {"status": "SUCCESS", "integrated_events": applied_count}
         except KeyError:
             return {"status": "ERROR", "reason": "Formato de delta inválido."}
+# hardware/hardware_bridge.py
+import time
+
+class MTPHardwareBridge:
+    def __init__(self, demand_validator_instance):
+        """
+        Puente de interacción con Hardware Libre (Sensores/Actuadores GPIO).
+        Fase 3 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.validator = demand_validator_instance
+        self.actuator_states = {
+            "hvac_heater": False,
+            "hydroponic_pump": False,
+            "mesh_antenna_amplifier": True
+        }
+
+    def read_physical_sensors(self):
+        """
+        Simula la lectura física de pines GPIO conectados a sensores reales.
+        En producción, aquí se importan librerías nativas (ej. RPi.GPIO o Adafruit).
+        """
+        # Datos simulados que vendrían de los sensores físicos de la Célula
+        return {
+            "current_exterior_temp_c": 12.5,  # Sensor térmico exterior
+            "current_water_level_liters": 450.0,  # Sensor de tanque hidropónico
+            "ambient_humidity_pct": 65.0
+        }
+
+    def execute_homeostasis_loop(self):
+        """
+        Toma las lecturas físicas, las contrasta con las ecuaciones de la Fase 1
+        y toma decisiones mecánicas automáticas sobre el hardware.
+        """
+        sensors = self.read_physical_sensors()
+        
+        # 1. Validar demanda térmica real en Julios según la Fase 1
+        needed_joules = self.validator.calculate_thermal_demand_joules(sensors["current_exterior_temp_c"])
+        
+        # 2. Lógica de activación mecánica automática
+        if needed_joules > 0:
+            # Si el entorno exige Julios para mantener los 20°C biológicos, se enciende el relé físico
+            self.actuator_states["hvac_heater"] = True
+            action_log = f"HOMEOSASIS ACTIVA: Inyectando {needed_joules} J al habitáculo."
+        else:
+            self.actuator_states["hvac_heater"] = False
+            action_log = "HOMEOSTASIS ESTABLE: Calefacción en modo pasivo."
+
+        return {
+            "timestamp": time.time(),
+            "sensor_snapshot": sensors,
+            "actuators_triggered": self.actuator_states,
+            "log": action_log
+        }
