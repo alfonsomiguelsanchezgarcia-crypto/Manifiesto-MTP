@@ -1584,3 +1584,69 @@ Para modificar el estado térmico y biológico de la célula, el puente de hardw
 
 ## 3. Lógica de Control de Bucle Cerrado (Homeostasis)
 El sistema opera bajo un esquema de control de bucle cerrado o histéresis. No responde a impulsos inmediatos (lo que desgastaría la maquinaria mecánica), sino que promedia las lecturas de los sensores cada 60 segundos y calcula la inercia térmica del espacio antes de conmutar los actuadores.
+# hardware/energy_manager.py
+import time
+
+class MTPEnergyManager:
+    def __init__(self, hardware_bridge, battery_capacity_joules):
+        """
+        Controlador de flujos energéticos autónomos.
+        Fase 3 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.bridge = hardware_bridge
+        self.max_battery = battery_capacity_joules
+        self.current_battery_charge = battery_capacity_joules * 0.5  # Inicia al 50%
+
+    def optimize_energy_distribution(self, generated_joules):
+        """
+        Administra la energía generada localmente (Solar/Eólica) priorizando:
+        1. Homeostasis Biológica inmediata.
+        2. Almacenamiento local (Baterías).
+        3. Declaración de Excedente (SURPLUS) para la red Mesh.
+        """
+        # 1. Leer las necesidades actuales de los sensores físicos
+        loop_data = self.bridge.execute_homeostasis_loop()
+        sensor_data = loop_data["sensor_snapshot"]
+        
+        # Calcular cuánta energía térmica exige el espacio habitacional ahora mismo
+        vital_thermal_demand = self.bridge.validator.calculate_thermal_demand_joules(
+            sensor_data["current_exterior_temp_c"]
+        )
+        
+        remaining_energy = generated_joules
+        consumed_by_homeostasis = 0.0
+        
+        # 2. Prioridad 1: Cubrir la demanda vital si la calefacción está activa
+        if vital_thermal_demand > 0 and remaining_energy > 0:
+            if remaining_energy >= vital_thermal_demand:
+                remaining_energy -= vital_thermal_demand
+                consumed_by_homeostasis = vital_thermal_demand
+            else:
+                consumed_by_homeostasis = remaining_energy
+                remaining_energy = 0.0
+
+        # 3. Prioridad 2: Cargar el banco de almacenamiento (Baterías)
+        stored_energy = 0.0
+        if remaining_energy > 0:
+            available_battery_slot = self.max_battery - self.current_battery_charge
+            if remaining_energy <= available_battery_slot:
+                self.current_battery_charge += remaining_energy
+                stored_energy = remaining_energy
+                remaining_energy = 0.0
+            else:
+                self.current_battery_charge = self.max_battery
+                stored_energy = available_battery_slot
+                remaining_energy -= available_battery_slot  # El resto es excedente real
+
+        # 4. Prioridad 3: Reportar excedente si las baterías están llenas
+        surplus_declared = round(remaining_energy, 2)
+        
+        return {
+            "timestamp": time.time(),
+            "input_generated_joules": generated_joules,
+            "allocated_to_homeostasis": round(consumed_by_homeostasis, 2),
+            "allocated_to_storage": round(stored_energy, 2),
+            "current_battery_soc_pct": round((self.current_battery_charge / self.max_battery) * 100, 2),
+            "network_surplus_joules": surplus_declared,
+            "node_status": "SURPLUS" if surplus_declared > 0 else "STABLE"
+        }
