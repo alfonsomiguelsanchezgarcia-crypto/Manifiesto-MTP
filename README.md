@@ -1572,3 +1572,15 @@ Este documento especifica los estándares de hardware abierto y electrónica ana
 ## 1. Arquitectura del Sistema de Control (Capa Física)
 La Célula Local utiliza microcontroladores de código abierto (arquitecturas tipo ESP32, Raspberry Pi RP2040 o Arduino) conectados a través de buses de comunicación industriales tolerantes a fallos (como I2C o RS-485 Modbus).
 
+
+## 2. Especificación de Componentes Básicos
+
+### A. Sensores de Telemetría Biológica
+* **Temperatura y Humedad Ambiental:** Sensores de estado sólido de alta precisión (tipo SHT3x o acoplados industriales con encapsulado IP65) colocados en el exterior y el interior del habitáculo.
+* **Carga de Fluidos (Agua/Nutrientes):** Sensores de presión hidrostática o sondas ultrasónicas sin contacto para evitar la corrosión y medir el volumen real de reserva en litros del tanque común.
+
+### B. Actuadores de Potencia (Aislamiento Galvánico)
+Para modificar el estado térmico y biológico de la célula, el puente de hardware activa cargas de alta potencia (calefactores, bombas de agua) utilizando **módulos de relés de estado sólido (SSR)** con aislamiento por optoacopladores. Esto blinda los circuitos lógicos del software contra picos de tensión o cortocircuitos en las líneas eléctricas de potencia.
+
+## 3. Lógica de Control de Bucle Cerrado (Homeostasis)
+El sistema opera bajo un esquema de control de bucle cerrado o histéresis. No responde a impulsos inmediatos (lo que desgastaría la maquinaria mecánica), sino que promedia las lecturas de los sensores cada 60 segundos y calcula la inercia térmica del espacio antes de conmutar los actuadores.
