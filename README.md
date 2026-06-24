@@ -1384,3 +1384,58 @@ class MTPMeshRouter:
         dx = peer_geo["lat"] - my_geo["lat"]
         dy = peer_geo["lon"] - my_geo["lon"]
         return round((dx**2 + dy**2)**0.5, 4)
+# mesh/resource_exchange.py
+import time
+
+class MTPResourceExchange:
+    def __init__(self, mesh_router):
+        """
+        Gestiona la viabilidad física del intercambio de recursos entre Células Locales.
+        Fase 2 del Manifiesto MTP. Diseñado por TRECEMIM & Gemini AI.
+        """
+        self.router = mesh_router
+        self.loss_coefficient_per_unit_distance = 0.08  # 8% de pérdida por fricción geográfica
+
+    def evaluate_transfer_viability(self, target_node_id, joules_to_send):
+        """
+        Evalúa si enviar energía a un nodo vecino es termodinámicamente eficiente
+        o si la distancia degrada demasiado el recurso antes de llegar.
+        """
+        if target_node_id not in self.router.routing_table:
+            return {"viable": False, "reason": "Nodo objetivo fuera del alcance de la red Mesh."}
+            
+        peer = self.router.routing_table[target_node_id]
+        distance = peer["friccion_distancia"]
+        
+        # Calcular la degradación de la energía durante el trayecto físico
+        energy_loss = joules_to_send * (self.loss_coefficient_per_unit_distance * distance)
+        net_energy_delivered = joules_to_send - energy_loss
+        
+        # Si la pérdida supera el 50%, el protocolo bloquea la transferencia por ineficiencia
+        if net_energy_delivered < (joules_to_send * 0.50):
+            return {
+                "viable": False, 
+                "reason": "Eficiencia inadmisible. Demasiada entropía generada en el transporte."
+            }
+            
+        return {
+            "viable": True,
+            "distance": distance,
+            "sent_joules": joules_to_send,
+            "delivered_joules": round(net_energy_delivered, 2),
+            "entropy_loss": round(energy_loss, 2)
+        }
+
+    def execute_blind_contract(self, target_node_id, transfer_report):
+        """ Registra la transferencia en el ledger local si ha sido viable. """
+        if not transfer_report["viable"]:
+            return "Contrato rechazado: Violación de eficiencia energética."
+            
+        receipt = {
+            "timestamp": time.time(),
+            "origin": self.router.node.node_id,
+            "destination": target_node_id,
+            "net_utility": transfer_report["delivered_joules"],
+            "status": "DISPATCHED"
+        }
+        return receipt
