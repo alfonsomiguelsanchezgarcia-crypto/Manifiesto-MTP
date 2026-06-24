@@ -1439,3 +1439,30 @@ class MTPResourceExchange:
             "status": "DISPATCHED"
         }
         return receipt
+# 📡 Protocolo Mesh de Conectividad Autárquica (VSR)
+
+Este módulo describe la arquitectura de red descentralizada de la MTP. El Protocolo Mesh permite el intercambio de datos y el balance de recursos entre Células Locales sin depender de proveedores de servicios de internet (ISP), servidores DNS ni satélites comerciales centralizados.
+
+## 1. Topología de Red y Capa Física (Radiofrecuencia Libre)
+La red opera en bandas de radiofrecuencia de uso libre (como sub-GHz LoRa a 868 MHz / 915 MHz o Alta Frecuencia HF para distancias continentales). Cada nodo actúa simultáneamente como:
+1. **Terminal Local:** Procesa los datos de su propio BCNH.
+2. **Repetidor Pasivo (Transistor Termodinámico):** Retransmite de forma ciega paquetes de nodos adyacentes si el gradiente de presión del sistema lo requiere.
+
+## 2. Algoritmo de Gradiente y Vector de Estado Vital (VSR)
+A diferencia de los protocolos tradicionales basados en la ruta más rápida (como OSPF), el enrutamiento MTP se rige por la diferencia de potencial termodinámico entre nodos. Los recursos se desplazan respondiendo a un diferencial físico:
+
+$$\Delta P_{term} = \text{Status}_{\text{Nodo B}} - \text{Status}_{\text{Nodo A}}$$
+
+Cuando un nodo reporta un estado de escasez (`CRITICAL`), se genera una "baja presión criptográfica" que atrae de forma automática los vectores de recursos excedentes de los nodos en estado `SURPLUS` que se encuentren dentro de su radio físico de acción.
+
+## 3. Ecuación de Fricción de Distancia y Pérdida por Transporte
+El transporte de materia o energía a través del espacio físico genera entropía irreversible (pérdidas por resistencia en cables eléctricos, combustible en transporte vehicular, o atenuación de ondas de radio). El protocolo evalúa la viabilidad del intercambio mediante la siguiente relación:
+
+$$E_{\text{neta}} = E_{\text{enviada}} \cdot \left(1 - \mu \cdot d\right)$$
+
+* $E_{\text{neta}}$: Energía útil real que llega al nodo destino ($J$).
+* $E_{\text{enviada}}$: Energía total despachada desde el nodo origen ($J$).
+* $\mu$: Coeficiente de fricción o pérdida por unidad de distancia ($m^{-1}$).
+* $d$: Distancia euclidiana geométrica entre las coordenadas de los dos nodos.
+
+> **Regla de Seguridad del Protocolo:** Si $E_{\text{neta}} < 0.5 \cdot E_{\text{enviada}}$ (es decir, si las pérdidas por transporte superan el 50%), el contrato se cancela automáticamente por ineficiencia termodinámica estructural, forzando a la red a buscar un nodo de almacenamiento intermedio más cercano.
